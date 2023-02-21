@@ -1,0 +1,32 @@
+ALGORITHM CountString
+VAR
+    string: STRING 
+    CountVowels: INTEGER
+    CountWord: INTEGER
+    Countlength: INTEGER
+    chara_str: CHARA
+    iteration: INTEGER
+BEGIN
+    read (string)
+    iteration := 0
+    Countlength := 0
+    CountVowels := 0
+    CountWord := 0
+    chara_str := string[iteration]
+        WHILE(chara_str NOT IS '.') DO
+	        Countlength = Countlength + 1
+	        IF (chara_str = ' ') THEN
+	            CountWord = CountWord+1
+	        ELSE IF (chara_str='a' OR chara_str='o' OR chara_str='u' OR chara_str='i' OR chara_str='e') THEN
+	            CountVowels = CountVowels+1
+	        END IF
+	        iteration = iteration+1
+	        chara_str = string[iteration]
+        END WHILE
+        write(Countlength)
+        write(CountVowels)
+        write(CountWord)
+END
+
+
+
